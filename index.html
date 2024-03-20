@@ -12,6 +12,21 @@
         header, section, footer { margin-bottom: 20px; }
         h1, h2 { color: #333; }
         footer { margin-top: 20px; }
+        .container {
+            display: flex;
+            align-items: center; /* Align items vertically in the center */
+            gap: 20px; /* Space between the image and the text */
+        }
+
+        img {
+            flex-shrink: 0; /* Prevent the image from shrinking */
+            width: 200px; /* Adjust as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .text {
+            flex-grow: 1; /* Allow the text to take up the remaining space */
+        }
     </style>
 </head>
 <body>
@@ -32,10 +47,14 @@
 
 <section id="introduction">
     <h2>Introduction</h2>
+    <div class="container">
     <img src="mascha.jpg" alt="picture of Mascha" width="300">
+    <div class="text">
     <p>Hi, good to meet you!</p>
     <p>I am professor for data engineering at the Bern University of Applied Sciences in Switzerland. Along with my amazing team we are affiliated at the <a href="https://www.bfh.ch/ti/generative-ai" target="_blank"> "Generative AI Lab</a> and the <a href="http://www.bfh.ch/ami" target="_blank">Applied Machine Intelligence</a> research group. This website gives an overview of our main research topics and outcomes.</p>
-</section>
+    </div>
+    </div>
+    </section>
 
 <section id="biasNLP">
     <h2>Fairness and Bias in Natural Language Processing</h2>
